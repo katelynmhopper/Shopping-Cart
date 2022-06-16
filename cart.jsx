@@ -9,8 +9,7 @@ const products = [
 const Cart = (props) => {
   const { Card, Accordion, Button } = ReactBootstrap;
   console.log("rendering Card component")
-  //let data = props.location.data ? props.location.data : products;
-  
+ 
   console.log(`data:${JSON.stringify(data)}`);
 
   return <Accordion defaultActiveKey="0">{list}</Accordion>;
@@ -203,12 +202,7 @@ const Products = (props) => {
     doFetch(url);
     makeAPIdataUseful();
     console.log('>>>> Restock')
-    // let newItems = data.map((item) => {
-    //   let { name, country, cost, instock } = item;
-    //   return { name, country, cost, instock };
-    // });
-    // console.log('Marla wants to know what newItems are:' , newItems)
-    // setItems([...items, ...newItems])
+
   };
 
   return (
