@@ -1,9 +1,6 @@
 import React from "react";
 import ReactBootstrap from "react-bootstrap";
 import axios from "axios";
-import fetchMock from "fetch-mock";
-import { mockAPI } from "./mockproducts";
-
 
 import {
     Card,
@@ -96,7 +93,7 @@ const products = [
     const { Fragment, useState, useEffect, useReducer } = React;
     const [query, setQuery] = useState("api/products");
     const [{ data, isLoading, isError }, doFetch] = useDataApi(
-      "http://localhost:1337/api/products",
+      "http://localhost:9000",
       {
         data: [],
       }
@@ -167,14 +164,12 @@ const products = [
       return (
         <Card key={index}>
           <Card.Header>
-            <div>
+            <div class="card">
               {item.name}
+              <div button class="btn-close"onClick={() => deleteCartItem(index)}></div>
             </div>
           </Card.Header>
-          <div
-            onClick={() => deleteCartItem(index)}
-       
-          >
+          <div>
             <Card.Body>
               $ {item.cost} from {item.country}
             </Card.Body>
@@ -229,8 +224,8 @@ const products = [
         <Row>
           <form
             onSubmit={(event) => {
-              restockProducts(`http://localhost:1337/${query}`);
-              console.log(`Restock called on ${query}`);
+              restockProducts(`http://localhost:9000/`);
+              console.log(`Restock called `);
               event.preventDefault();
             }}
           >
