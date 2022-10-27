@@ -163,11 +163,11 @@ const Products = (props) => {
       <Card key={index}>
         <Card.Header>
           <Accordion.Toggle as={Button} variant="link" eventKey={1 + index}>
-            {item.name}
+            {item.name} <Button variant ="primary" size="medium" margin="5px" onClick = {() => deleteCartItem(index)}>Delete</Button>
           </Accordion.Toggle>
         </Card.Header>
         <Accordion.Collapse
-          onClick={() => deleteCartItem(index)}
+          // onSubmit={() => deleteCartItem(index)}
           eventKey={1 + index}
         >
           <Card.Body>
@@ -208,20 +208,27 @@ const Products = (props) => {
   return (
     <Container>
       <Row>
+        <div className="products">
         <Col>
           <h1>Product List</h1>
           <ul style={{ listStyleType: "none" }}>{list}</ul>
         </Col>
+        </div>
+        <div className="cart">
         <Col>
           <h1>Cart Contents</h1>
           <Accordion>{cartList}</Accordion>
         </Col>
+        </div>
+        <div className="checkout">
         <Col>
           <h1>CheckOut </h1>
           <Button onClick={checkOut}>CheckOut $ {finalList().total}</Button>
           <div> {finalList().total > 0 && finalList().final} </div>
         </Col>
+        </div>
       </Row>
+      {/* <div className="form">
       <Row>
         <form
           onSubmit={(event) => {
@@ -229,15 +236,16 @@ const Products = (props) => {
             console.log(`Restock called on ${query}`);
             event.preventDefault();
           }}
-        >
+          >
           <input
             type="text"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-          />
+            />
           <button type="submit">ReStock Products</button>
         </form>
       </Row>
+      </div> */}
     </Container>
   );
 };

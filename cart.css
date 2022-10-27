@@ -1,0 +1,25 @@
+body{
+    background: url('grocery.jpeg') no-repeat center fixed;
+    background-size: cover;
+    font-size: medium;
+    text-decoration: underline;
+    padding: 25px
+}
+
+.products{
+    color: black;
+    margin: 2%
+}
+.cart{
+    color: black;
+    margin: 2%
+}
+.checkout{
+    color: black;
+    margin: 2%;    
+    font-size: small;
+}
+.form{
+    color: dimgray;
+
+}
