@@ -1,25 +1,50 @@
-body{
-    background: url('grocery.jpeg') no-repeat center fixed;
-    background-size: cover;
-    font-size: medium;
-    text-decoration: underline;
-    padding: 25px
+body {
+	background: url("grocery3.jpg") no-repeat center fixed;
+	background-size: cover;
+	font-size: medium;
+	text-align: center;
+	text-decoration: underline;
 }
 
-.products{
-    color: black;
-    margin: 2%
+.products {
+	font: black;
+	margin-top: 20%;
+	background-color: transparent;
+	margin-right: 15%;
 }
-.cart{
-    color: black;
-    margin: 2%
+.cart {
+	color: black;
+	background-color: transparent;
+	margin-top: 5%;
+	text-align: left;
 }
-.checkout{
-    color: black;
-    margin: 2%;    
-    font-size: small;
+.checkout {
+	color: black;
+	font-size: large;
+	margin-left: 10%;
+	margin-top: 5%;
+	text-align: right;
 }
-.form{
-    color: dimgray;
+.form {
+	color: dimgray;
+}
 
+.container {
+	padding: 0;
+	margin-left: 0;
+}
+
+.cardLayout {
+	text-align: start;
+	white-space: pre-wrap;
+}
+
+.button {
+	background-color: primary;
+	size: medium;
+	margin-left: 40px;
+}
+
+.button2 {
+	margin-bottom: 5%;
 }
